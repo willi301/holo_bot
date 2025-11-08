@@ -97,12 +97,10 @@ async def live(ctx):
     if channel_list:
         live_msg = "🔴 These channels are currently live:\n"
         for channel in channel_list:
-            live_msg += f"• **{channel['name']}** → {channel['url']}\n"
+            live_msg += f"• **{channel['name']}** → <{channel['url']}>\n"
         await ctx.send(live_msg)
     else:
         await ctx.send("⚫ No channels are currently live right now.")
-
-    await ctx.send("✅ Thank you for waiting!")
 
 
 
